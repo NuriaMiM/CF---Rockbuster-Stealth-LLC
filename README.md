@@ -1,1 +1,2 @@
 # SQLFirstTry
+This project aimed to assess Rockbuster Stealth LLC in the launching of their new streaming service. I used SQL to analyze data* and offer the company data-driven insights on how to plan the strategy for this launching, uncovering information that would ensure the service was suited to what potential customers would look for and focused on achieving bigger revenue and the best impact possible upon the release.
