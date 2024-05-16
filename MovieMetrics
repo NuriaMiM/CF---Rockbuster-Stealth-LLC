@@ -1,0 +1,18 @@
+# Looking for metrics
+SELECT
+	MIN(release_year) AS min_release_year,
+	MIN(rental_duration) AS min_rental_duration,
+	MIN(rental_rate) AS min_rental_rate,
+	MIN(length) AS min_length,
+	MAX(release_year) AS max_release_year,
+	MAX(rental_duration) AS max_rental_duration,
+	MAX(rental_rate) AS max_rental_rate,
+	MAX(length) AS max_length,
+	ROUND(AVG(release_year),0) AS avg_release_year,
+	ROUND(AVG(rental_duration),2) AS avg_rental_duration,
+	ROUND(AVG(rental_rate),2) AS avg_rental_rate,
+	ROUND(AVG(length),2) AS avg_length,
+	MODE() WITHIN GROUP (ORDER BY language_id) AS most_common_language,
+	MODE() WITHIN GROUP (ORDER BY last_update) AS most_common_last_update
+FROM film
+	
