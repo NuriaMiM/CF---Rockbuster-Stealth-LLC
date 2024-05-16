@@ -8,5 +8,6 @@ The key points that guided the analysis where uncovering information on:
 - Segmentation of the repository to find what was popular.
 - Where revenue was coming from.
 ## Tools
-- Tableau: For data analysis and visualizations
+- PgAdmin4: For data analysis
+- Tableau: For visualizations
 - PowerPoint: For the presentation for the stakeholders
