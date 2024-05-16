@@ -1,0 +1,16 @@
+SELECT ROUND(AVG(total_amount),2) AS avg_amount_per_customer,
+		D.country
+FROM
+	(SELECT SUM(B.amount) AS total_amount,
+		A.customer_id
+	FROM customer A
+	INNER JOIN payment B ON A.customer_id = B.customer_id
+	GROUP BY A.customer_id) AS amount_per_customer
+	
+INNER JOIN customer A ON amount_per_customer.customer_id = A.customer_id
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+INNER JOIN payment E ON A.customer_id = E.customer_id 
+GROUP BY D.country
+ORDER BY avg_amount_per_customer DESC
